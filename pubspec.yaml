@@ -38,6 +38,7 @@ dependencies:
   table_calendar: ^3.0.9
   intl: ^0.18.1
   get: ^4.6.5
+  order_tracker_zen: ^1.0.0+4
 
 dev_dependencies:
   flutter_test:

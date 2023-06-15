@@ -1,7 +1,10 @@
 import 'package:calender_demo/features/delivery_details/delivery_details_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:table_calendar/table_calendar.dart';
+import '../widgets/custom_appbar.dart';
+import 'widgets/calender_widget.dart';
+import 'widgets/day_track_widget.dart';
+
 // import 'package:intl/date_symbol_data_local.dart';
 
 class DeliveryDetailsScreen extends StatefulWidget {
@@ -36,39 +39,47 @@ class DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
         init: DeliveryDetailsController(),
         builder: (controller) {
           return Scaffold(
-            appBar: AppBar(
-              title: const Text('Table Calendar Demo'),
+            appBar: const CustomAppBar(
+              title1: 'Delivery details',
+              icon: SizedBox(),
+              icon2: Icon(
+                Icons.arrow_back_ios,
+                color: Color(0xffbebebe),
+              ),
             ),
-            body: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Container(
-                height: MediaQuery.of(context).size.height / 2,
-                decoration: BoxDecoration(
-                    border: Border.all(
-                      width: 2,
-                      color: Colors.black,
+            body: SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    CalenderWidget(
+                      controller: controller,
                     ),
-                    borderRadius: BorderRadius.circular(10)),
-                child: TableCalendar(
-                  rowHeight: 50,
-                  firstDay: DateTime.utc(2010, 10, 16),
-                  lastDay: DateTime.utc(2030, 3, 14),
-                  focusedDay: DateTime.now(),
-                  rangeStartDay: controller.rangeStartDay,
-                  rangeEndDay: controller.rangeEndDay,
-                  enabledDayPredicate: controller.isDayEnabled,
-                  onDaySelected: controller.onDaySelected,
-
-                  // locale: 'ar-AE',
-                  headerStyle: const HeaderStyle(
-                      formatButtonVisible: false, titleCentered: true),
-                  calendarStyle: CalendarStyle(
-                    rangeStartDecoration: BoxDecoration(
-                        color: Colors.blue.shade100, shape: BoxShape.circle),
-                    rangeEndDecoration: BoxDecoration(
-                        color: Colors.blue.shade100, shape: BoxShape.circle),
-                    rangeHighlightColor: Colors.blue.shade100,
-                  ),
+                    const Padding(
+                      padding: EdgeInsets.all(20.0),
+                      child: Text('Selected Duration'),
+                    ),
+                    const DayTrackWidget(),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  elevation: 0,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(7),
+                                  ),
+                                  backgroundColor: const Color(0xff365DD6)),
+                              onPressed: () {},
+                              child: const Text('Confirm Order')),
+                        ),
+                      ],
+                    )
+                  ],
                 ),
               ),
             ),
