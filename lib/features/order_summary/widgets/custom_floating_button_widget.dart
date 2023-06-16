@@ -16,30 +16,54 @@ class CustomFloatingButton extends StatelessWidget {
             decoration: BoxDecoration(
                 color: const Color(0xff365DD6),
                 borderRadius: BorderRadius.circular(10)),
-            child: const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Image(
-                        height: 40,
-                        width: 40,
-                        fit: BoxFit.contain,
-                        image: AssetImage('assets/images/profile.jpg')),
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                  const Row(
                     children: [
-                      Text(
-                        'Karim Benzema',
-                        style: TextStyle(color: Colors.white),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Image(
+                            height: 40,
+                            width: 40,
+                            fit: BoxFit.contain,
+                            image: AssetImage('assets/images/profile.jpg')),
                       ),
-                      Text('Lender', style: TextStyle(color: Colors.white))
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Karim Benzema',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18),
+                          ),
+                          Text('Lender',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 16))
+                        ],
+                      ),
                     ],
                   ),
-                  Icon(
-                    Icons.call,
-                    color: Colors.white,
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: Colors.white10,
+                          border: Border.all(
+                            width: 1,
+                            color: Colors.white,
+                          ),
+                          borderRadius: BorderRadius.circular(8)),
+                      child: const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Icon(
+                          Icons.call,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
                   )
                 ]),
           ),

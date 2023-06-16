@@ -21,21 +21,23 @@ class OrderSummaryScreen extends StatelessWidget {
           color: Color(0xffbebebe),
         ),
       ),
-      body: Padding(
-        padding: EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            ProductCard(),
-            SizedBox(
-              height: 20,
-            ),
-            Text('Order Status'),
-            SizedBox(
-              height: 20,
-            ),
-            OrderStatusWidget(),
-          ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ProductCard(),
+              SizedBox(
+                height: 20,
+              ),
+              Text('Order Status'),
+              SizedBox(
+                height: 20,
+              ),
+              OrderStatusWidget(),
+            ],
+          ),
         ),
       ),
     );
