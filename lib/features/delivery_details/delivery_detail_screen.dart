@@ -60,7 +60,7 @@ class DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                       padding: EdgeInsets.all(20.0),
                       child: Text('Selected Duration'),
                     ),
-                    const DayTrackWidget(),
+                     DayTrackWidget(controller: controller,),
                     const SizedBox(
                       height: 20,
                     ),
