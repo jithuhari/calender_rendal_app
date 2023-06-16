@@ -2,6 +2,7 @@ import 'package:calender_demo/features/order_summary/widgets/order_status_widget
 import 'package:flutter/material.dart';
 
 import '../widgets/custom_appbar.dart';
+import 'widgets/custom_floating_button_widget.dart';
 import 'widgets/product_card_widget.dart';
 
 class OrderSummaryScreen extends StatelessWidget {
@@ -9,48 +10,10 @@ class OrderSummaryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: Container(
-        margin: const EdgeInsets.all(10),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                  color: const Color(0xff365DD6),
-                  borderRadius: BorderRadius.circular(10)),
-              child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Image(
-                          height: 40,
-                          width: 40,
-                          fit: BoxFit.contain,
-                          image: AssetImage('assets/images/profile.jpg')),
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Karim Benzema',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        Text('Lender', style: TextStyle(color: Colors.white))
-                      ],
-                    ),
-                    Icon(
-                      Icons.call,
-                      color: Colors.white,
-                    )
-                  ]),
-            ),
-          ],
-        ),
-      ),
-      appBar: const CustomAppBar(
+      floatingActionButton: CustomFloatingButton(),
+      appBar: CustomAppBar(
         title1: 'Order Summary',
         icon: SizedBox(),
         icon2: Icon(
@@ -58,7 +21,7 @@ class OrderSummaryScreen extends StatelessWidget {
           color: Color(0xffbebebe),
         ),
       ),
-      body: const Padding(
+      body: Padding(
         padding: EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
