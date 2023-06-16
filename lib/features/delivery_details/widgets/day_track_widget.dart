@@ -21,7 +21,7 @@ class DayTrackWidget extends StatelessWidget {
             title: "",
             date: controller.rangeStartDay.toString() == 'null'
                 ? 'Select Start date'
-                : controller.rangeStartDay.toString(),
+                : '${controller.rangeStartDay!.day.toString()}- ${controller.rangeStartDay!.month.toString()}-${controller.rangeStartDay!.year.toString()}',
             tracker_details: [
               TrackerDetails(
                 title: "",
@@ -33,7 +33,7 @@ class DayTrackWidget extends StatelessWidget {
             title: "",
             date: controller.rangeEndDay.toString() == 'null'
                 ? 'Select End Date'
-                : controller.rangeEndDay.toString(),
+                : '${controller.rangeEndDay!.day.toString()}- ${controller.rangeEndDay!.month.toString()}-${controller.rangeEndDay!.year.toString()}',
             tracker_details: [
               TrackerDetails(
                 title: "",
