@@ -52,7 +52,7 @@ class CustomFloatingButton extends StatelessWidget {
                       decoration: BoxDecoration(
                           color: Colors.white10,
                           border: Border.all(
-                            width: .6,
+                            width: 1,
                             color: Colors.white,
                           ),
                           borderRadius: BorderRadius.circular(8)),
@@ -61,6 +61,7 @@ class CustomFloatingButton extends StatelessWidget {
                         child: Icon(
                           Icons.call,
                           color: Colors.white,
+                          size: 18,
                         ),
                       ),
                     ),

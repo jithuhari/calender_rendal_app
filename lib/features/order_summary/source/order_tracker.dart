@@ -222,7 +222,7 @@ class _OrderTrackerState extends State<OrderTracker>
                         value: controller?.value ?? 0.0,
                         backgroundColor:
                             widget.inActiveColor ?? Colors.grey[300],
-                        color: widget.activeColor ?? Colors.green,
+                        color: widget.activeColor ?? Colors.grey,
                       ),
                     ),
                   ),
@@ -333,7 +333,7 @@ class _OrderTrackerState extends State<OrderTracker>
                         backgroundColor:
                             widget.inActiveColor ?? Colors.grey[300],
                         color: isFirst == true
-                            ? widget.activeColor ?? Colors.green
+                            ? widget.activeColor ?? Colors.grey
                             : widget.inActiveColor ?? Colors.grey[300],
                       ),
                     ),
@@ -445,7 +445,7 @@ class _OrderTrackerState extends State<OrderTracker>
                         backgroundColor:
                             widget.inActiveColor ?? Colors.grey[300],
                         color: isSecond == true
-                            ? widget.activeColor ?? Colors.green
+                            ? widget.activeColor ?? Colors.grey
                             : widget.inActiveColor ?? Colors.grey[300],
                       ),
                     ),
