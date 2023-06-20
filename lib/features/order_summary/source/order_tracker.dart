@@ -290,7 +290,7 @@ class _OrderTrackerState extends State<OrderTracker>
                           : widget.inActiveColor ?? Colors.grey[300],
                       borderRadius: BorderRadius.circular(50)),
                   child: const Icon(
-                    Icons.thumb_up,
+                    Icons.thumb_up_alt_outlined,
                     size: 15,
                     color: Colors.white,
                   ),

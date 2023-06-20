@@ -30,7 +30,10 @@ class OrderSummaryScreen extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Text('Order Status'),
+              Text(
+                'Order Status',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              ),
               SizedBox(
                 height: 20,
               ),
