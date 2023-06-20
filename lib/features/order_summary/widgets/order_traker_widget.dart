@@ -10,7 +10,7 @@ class OrderTrackerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OrderTracker(
-      status: Status.shipped,
+      status: Status.outOfDelivery,
       orderTitleAndDateList: [
         TextDto("20 June , 2023", ""),
       ],

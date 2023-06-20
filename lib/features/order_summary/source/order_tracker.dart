@@ -174,14 +174,14 @@ class _OrderTrackerState extends State<OrderTracker>
             Row(
               children: [
                 Container(
-                  height: 15,
-                  width: 15,
+                  height: 20,
+                  width: 20,
                   decoration: BoxDecoration(
                       color: widget.activeColor ?? Colors.green,
                       borderRadius: BorderRadius.circular(50)),
                   child: const Icon(
                     Icons.check,
-                    size: 10,
+                    size: 15,
                     color: Colors.white,
                   ),
                 ),
@@ -209,7 +209,7 @@ class _OrderTrackerState extends State<OrderTracker>
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 6),
+                  padding: const EdgeInsets.only(left: 8),
                   child: SizedBox(
                     width: 2,
                     height: widget.orderTitleAndDateList != null &&
@@ -277,8 +277,8 @@ class _OrderTrackerState extends State<OrderTracker>
             Row(
               children: [
                 Container(
-                  height: 15,
-                  width: 15,
+                  height: 20,
+                  width: 20,
                   decoration: BoxDecoration(
                       color: (widget.status?.name == Status.shipped.name ||
                                   widget.status?.name ==
@@ -291,7 +291,7 @@ class _OrderTrackerState extends State<OrderTracker>
                       borderRadius: BorderRadius.circular(50)),
                   child: const Icon(
                     Icons.thumb_up,
-                    size: 10,
+                    size: 15,
                     color: Colors.white,
                   ),
                 ),
@@ -319,7 +319,7 @@ class _OrderTrackerState extends State<OrderTracker>
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 6),
+                  padding: const EdgeInsets.only(left: 8),
                   child: SizedBox(
                     width: 2,
                     height: widget.shippedTitleAndDateList != null &&
@@ -390,8 +390,8 @@ class _OrderTrackerState extends State<OrderTracker>
             Row(
               children: [
                 Container(
-                  height: 15,
-                  width: 15,
+                  height: 20,
+                  width: 20,
                   decoration: BoxDecoration(
                       color:
                           (widget.status?.name == Status.outOfDelivery.name ||
@@ -403,7 +403,7 @@ class _OrderTrackerState extends State<OrderTracker>
                       borderRadius: BorderRadius.circular(50)),
                   child: const Icon(
                     Icons.border_all,
-                    size: 10,
+                    size: 15,
                     color: Colors.white,
                   ),
                 ),
@@ -431,7 +431,7 @@ class _OrderTrackerState extends State<OrderTracker>
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 6),
+                  padding: const EdgeInsets.only(left: 8),
                   child: SizedBox(
                     width: 2,
                     height: widget.outOfDeliveryTitleAndDateList != null &&
@@ -503,8 +503,8 @@ class _OrderTrackerState extends State<OrderTracker>
             Row(
               children: [
                 Container(
-                  height: 15,
-                  width: 15,
+                  height: 20,
+                  width: 20,
                   decoration: BoxDecoration(
                       color: widget.status?.name == Status.delivered.name &&
                               isThird == true
@@ -513,7 +513,7 @@ class _OrderTrackerState extends State<OrderTracker>
                       borderRadius: BorderRadius.circular(50)),
                   child: const Icon(
                     Icons.keyboard_return,
-                    size: 10,
+                    size: 15,
                     color: Colors.white,
                   ),
                 ),
@@ -557,7 +557,7 @@ class _OrderTrackerState extends State<OrderTracker>
                       Text(
                         widget.deliveredTitleAndDateList?[index].date ?? "",
                         style: widget.subDateTextStyle ??
-                            TextStyle(fontSize: 14, color: Colors.grey[300]),
+                            TextStyle(fontSize: 14, color: Colors.grey[400]),
                       )
                     ],
                   );
