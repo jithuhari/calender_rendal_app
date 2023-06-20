@@ -14,7 +14,7 @@ class CustomFloatingButton extends StatelessWidget {
         children: [
           Container(
             decoration: BoxDecoration(
-                color: const Color(0xff365DD6),
+                color: const Color(0xff1DC9A0),
                 borderRadius: BorderRadius.circular(10)),
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -52,7 +52,7 @@ class CustomFloatingButton extends StatelessWidget {
                       decoration: BoxDecoration(
                           color: Colors.white10,
                           border: Border.all(
-                            width: 1,
+                            width: .6,
                             color: Colors.white,
                           ),
                           borderRadius: BorderRadius.circular(8)),

@@ -1,8 +1,7 @@
-import 'package:calender_demo/features/order_summary/widgets/order_status_widget.dart';
 import 'package:flutter/material.dart';
-
 import '../widgets/custom_appbar.dart';
 import 'widgets/custom_floating_button_widget.dart';
+import 'widgets/order_traker_widget.dart';
 import 'widgets/product_card_widget.dart';
 
 class OrderSummaryScreen extends StatelessWidget {
@@ -35,7 +34,7 @@ class OrderSummaryScreen extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              OrderStatusWidget(),
+              OrderTrackerWidget()
             ],
           ),
         ),

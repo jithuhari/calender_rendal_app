@@ -1,7 +1,6 @@
 import 'package:calender_demo/features/order_summary/order_summary.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'features/delivery_details/deliver_details.dart';
 
 void main() => runApp(const MyApp());
 
