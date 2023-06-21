@@ -4,9 +4,6 @@ class DeliveryDetailsController extends GetxController {
   DateTime? rangeStartDay;
   DateTime? rangeEndDay;
 
-  var now = DateTime.now();
-  var earlier = DateTime.now().subtract(const Duration(seconds: 5));
-
   @override
   void onInit() {
     super.onInit();
