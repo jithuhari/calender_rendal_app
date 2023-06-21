@@ -1,4 +1,4 @@
-import 'package:calender_demo/features/order_summary/order_summary.dart';
+import 'package:calender_demo/features/delivery_details/delivery_detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const OrderSummaryScreen(),
+      home: const DeliveryDetailsScreen(),
     );
   }
 }

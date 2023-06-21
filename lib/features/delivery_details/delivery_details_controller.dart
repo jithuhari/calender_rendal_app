@@ -4,6 +4,9 @@ class DeliveryDetailsController extends GetxController {
   DateTime? rangeStartDay;
   DateTime? rangeEndDay;
 
+  var now = DateTime.now();
+  var earlier = DateTime.now().subtract(const Duration(seconds: 5));
+
   @override
   void onInit() {
     super.onInit();
@@ -25,16 +28,29 @@ class DeliveryDetailsController extends GetxController {
   // -------------range select---------------
   void onDaySelected(DateTime selectedDay, DateTime focusedDay) {
     if (rangeStartDay == null) {
-      rangeStartDay = selectedDay;
-      rangeEndDay = null;
-      update();
+      if (selectedDay
+          .isBefore(DateTime.now().subtract(const Duration(hours: 24)))) {
+        rangeStartDay = null;
+        rangeEndDay = null;
+      } else {
+        rangeStartDay = selectedDay;
+        rangeEndDay = null;
+
+        update();
+      }
     } else if (rangeStartDay != null &&
         rangeEndDay == null &&
         selectedDay.isAfter(rangeStartDay!)) {
-      rangeEndDay = selectedDay;
-      update();
+      if (selectedDay.isBefore(DateTime.now())) {
+        rangeStartDay = null;
+        rangeEndDay = null;
+      } else {
+        rangeEndDay = selectedDay;
+
+        update();
+      }
     } else {
-      rangeStartDay = selectedDay;
+      rangeStartDay = null;
       rangeEndDay = null;
       update();
     }
