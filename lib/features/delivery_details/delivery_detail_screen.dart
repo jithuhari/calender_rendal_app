@@ -60,7 +60,9 @@ class DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                       padding: EdgeInsets.all(20.0),
                       child: Text('Selected Duration'),
                     ),
-                     DayTrackWidget(controller: controller,),
+                    DayTrackWidget(
+                      controller: controller,
+                    ),
                     const SizedBox(
                       height: 20,
                     ),
@@ -73,7 +75,7 @@ class DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(7),
                                   ),
-                                  backgroundColor: const Color(0xff365DD6)),
+                                  backgroundColor: const Color(0xff1DC9A0)),
                               onPressed: () {},
                               child: const Text('Confirm Order')),
                         ),
